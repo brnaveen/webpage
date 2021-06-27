@@ -7,100 +7,68 @@ layout: default
 <h4><a href="https://scholar.google.com/citations?user=3pNkUBIAAAAJ&hl=en">Google Scholar Page</a></h4>
 <!--<h4><a href="http://arxiv.org/find/cs/1/au:+Ongie_G/0/1/0/all/0/1">arXiv.org Pre-prints</a></h4>-->
 
-<h2>Pre-prints</h2>
-<ul>
-{% for member in site.data.pubs.preprints %}
-  <li>
-    <a href="{{ member.url }}">
-    <b>{{ member.title }}</b>.
-    </a>
-  </br>
-    {{member.authors}}. {{member.year}}.
-    {% if member.comment %}
-    <em>{{member.comment}}.</em>
-    {% endif %}
-    {% if member.pdf %}
-    <a href="{{member.pdf}}">(pdf)</a>
-    {% endif %}
-    {% if member.code %}
-    <a href="{{member.code}}">(code)</a>
-    {% endif %}      
-    {% for tag in member.tags %}
-    <span class="label label-info">{{tag}}</span>
-    {% endfor %}
-  </li>
-{% endfor %}
-</ul>
+        <!-- conferences -->
+        <div class="col-12 pt-4">
+      		<h2 class="pb-2">Conference Proceedings and Abstracts</h2>
+      		<ul>
 
-<h2>Journal and Selected Conference Papers</h2>
-<ul>
-{% for member in site.data.pubs.journal %}
-  <li>
-    <a href="{{ member.url }}">
-    <b>{{ member.title }}</b>.
-    </a>
-  </br>
-    {{member.authors}}. {{member.journal}}. {{member.year}}.
-    {% if member.pdf %}
-    <a href="{{member.pdf}}">(pdf)</a>
-    {% endif %} 
-    {% if member.code %}
-    <a href="{{member.code}}">(code)</a>
-    {% endif %}     
-    {% for tag in member.tags %}
-    <span class="label label-info">{{tag}}</span>
-    {% endfor %}
-  </li>
-{% endfor %}
-</ul>
+      		<!-- c6 -->
+      		<li>
+            <h5>Digital Breast Tomosynthesis Denoising Using Deep Convolutional Neural Network: Effects of Dose Level of Training Target Images </h5>
+            <p>
+              M. Gao, J. A. Fessler, and H.-P. Chan <br> in <em>Proceedings of SPIE</em>, 11595, 115951K, 2021, DOI: 10.1117/12.2580900.  <br>
+              <a href="https://doi.org/10.1117/12.2580900" class="badge badge-secondary" target="_blank">Link</a>
+              <a href="./doc/spie2021_gmingjie_slides.pdf" class="badge badge-secondary" target="_blank">Slides</a>
+            </p>
+            </li>
 
-<h2>Conference Proceedings</h2>
-<ul>
-{% for member in site.data.pubs.conference %}
-  <li>
-    <a href="{{ member.url }}">
-    <b>{{ member.title }}</b>.
-    </a>
-  </br>    
-    {{member.authors}}. {{member.journal}}. {{member.year}}.
-    {% if member.pdf %}
-    <a href="{{member.pdf}}">(pdf)</a>
-    {% endif %}
-    {% if member.code %}
-    <a href="{{member.code}}">(code)</a>
-    {% endif %}         
-    {% for tag in member.tags %}
-    <span class="label label-info">{{tag}}</span>
-    {% endfor %}    
-  </li>
-{% endfor %}
-</ul>
+            <!-- c5 -->
+            <li>
+            <h5>Training Deep Convolutional Neural Network With <em>In Silico</em> Data for Denoising Digital Breast Tomosynthesis Images </h5>
+            <p>
+              M. Gao, J. A. Fessler, and H.-P. Chan <br> in <em>RSNA Scientific Assembly and Annual Meeting</em>, 2020.  
+            </p>
+            </li>
 
-<div class="modal fade" id="bibmodal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Bibtex reference</h4>
+            <!-- c4 -->
+            <li>
+            <h5>Deep Convolutional Neural Network Denoising for Digital Breast Tomosynthesis Reconstruction </h5>
+            <p>
+              M. Gao, R. K. Samala, J. A. Fessler, and H.-P. Chan <br> in <em>Proceedings of SPIE</em>, 11312, 113120Q, 2020, DOI: 10.1117/12.2549361. <br>
+              <a href="https://doi.org/10.1117/12.2549361" class="badge badge-secondary" target="_blank">Link</a>
+              <a href="./doc/spie2020_gmingjie_slides.pdf" class="badge badge-secondary" target="_blank">Slides</a>
+            </p>
+            </li>
+
+            <!-- c3 -->
+            <li>
+            <h5>Myelin Water Fraction Estimation Using Small-tip Fast Recovery MRI </h5>
+            <p>
+              S. T. Whitaker, G. Nataraj, M. Gao, J.-F. Nielsen, and J. A. Fessler <br> in <em>Proceedings of ISMRM Annual Conference</em>, 2019. <br>
+              <a href="https://index.mirasmart.com/ISMRM2019/PDFfiles/4403.html" class="badge badge-secondary" target="_blank">Link</a> 
+            </p>
+            </li>
+
+            <!-- c2 -->
+            <li>
+            <h5>Kernel Regression for Fast Myelin Water Imaging </h5>
+            <p>
+              G. Nataraj, M. Gao, J.-F. Nielsen, and J. A. Fessler <br> in <em>ISMRM Workshop on Machine Learning Part II</em>, 2018 (2nd-place poster award). 
+            </p>
+            </li>
+
+            <!-- c1 -->
+            <li>
+            <h5>Shallow Learning With Kernels for Dictionary-free Magnetic Resonance Fingerprinting </h5>
+            <p>
+              G. Nataraj, M. Gao, J. Assländer, C. Scott, and J. A. Fessler <br> in <em>ISMRM Workshop on MR Fingerprinting</em>, 2017. <br>
+              <a href="./doc/mrf2017_gnataraj.pdf" class="badge badge-secondary" target="_blank">Paper</a> 
+              <a href="./doc/mrf2017_gnataraj_slides.pdf" class="badge badge-secondary" target="_blank">Slides</a> 
+            </p>
+            </li>
+
+            </ul>
+        </div>
+          
       </div>
-      <div class="modal-body">
-        <pre id="bibref"></pre>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-{% include footer1.html %}
-<script>
-$( function(){
-  $('.biblink').click( function(){
-    $('#bibref').html( $(this).attr('data-bib') );
-    $('#bibmodal').modal('show');
-  } );
-  $('#bibref').click( function(){ 
-    $(this).select();
-  } );
-} );
-</script>
-{% include footer2.html %}
-
+    </div>
