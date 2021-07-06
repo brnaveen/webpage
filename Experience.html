@@ -16,7 +16,8 @@ layout: default
 p:not([class]){
   line-height: var(--cssTypographyLineHeight, 1.78);
   margin-top: var(--cssTypographyBasicMargin, 1em);
-  margin-bottom: 0;
+  margin-bottom: 0; 
+  margin-left: 10px; 
 }
 
 p:not([class]):first-child{
@@ -80,6 +81,7 @@ core styles
 
 .card__content{
   margin-top: var(--cardContentMarginTop, .5rem);
+  width: 100%;
 }
 
 /*
@@ -91,13 +93,9 @@ skin
   border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
   box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .2), 0 2px 4px 0 rgba(0, 0, 0, .24));
   background-color: var(--timelineCardBackgroundColor, #fff);
-  transition: 0.3s; 
-  width: 100%;
+  transition: 0.3s;
+  width: 150%;
 }
-.card:hover {
-  box-shadow: 0 12px 20px 0 rgba(0,0,0,0.6);
-}
-
 
 /*
 extensions
@@ -156,7 +154,7 @@ SKIN
 }
 
 .timeline__card{
-  position: left;
+  position: relative;
   margin-left: var(--timelineCardLineGap, 1rem);
 }
 
@@ -172,13 +170,13 @@ SKIN
 
 .timeline__card::before{
   content: "";
-  width: 150%;
+  width: 100%;
   height: var(--timelineCardLineWidth, 6px);
   background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
 
   position: absolute;
   top: var(--timelineCardLineTop, 1rem);
-  left: 10%;
+  left: 50%;
   z-index: -1;
 }
 
